@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <script src="./profile.js" defer></script>
+    <style>
+        :root {
+    --profile-img-width: 240px;
+}
+
+body {
+    background-color: #313131;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+input,
+select,
+#submit {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+p {
+    margin-top: 8px;
+    margin-bottom: 0px;
+}
+
+dialog {
+    border: none;
+    border-radius: 10px;
+    width: 250px;
+}
+
+dialog::backdrop {
+    background-color: black;
+    opacity: 50%;
+}
+
+button {
+    padding: 5px 20px;
+    font-size: 1rem;
+    border-radius: 20px;
+}
+
+a {
+    text-align: center;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+select {
+    background-color: #313131;
+}
+
+dialog p {
+    text-align: center;
+}
+
+dialog div {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.profile-container,
+.form-container,
+dialog {
+    padding: 20px;
+    margin: 50px auto;
+    background-color: #313131;
+    box-shadow: 0px 0px 50px 0px rgb(0, 0, 0);
+    border-radius: 50px;
+}
+
+.profile-container {
+    width: fit-content;
+    display: grid;
+    grid-template-columns: max-content max-content;
+    column-gap: 20px;
+}
+
+.img-container {
+    width: var(--profile-img-width);
+    height: var(--profile-img-width);
+    border-radius: 5px;
+    background-color: #313131;
+}
+
+.img-container+button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.info-container {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    column-gap: 20px;
+}
+
+.info-container label {
+    font-weight: bold;
+}
+
+.info-container input:disabled,
+.info-container select:disabled {
+    appearance: none;
+    border-color: transparent;
+    background-color: transparent;
+    padding-left: 0px;
+    padding-right: 20px;
+    color: white;
+}
+
+.info-container h1 {
+    margin: 0px 0px 10px;
+    grid-column: 1 / 3;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#edit {
+    margin-left: auto;
+}
+
+.form-container {
+    width: 400px;
+}
+
+.error-field {
+    border: 1px solid red;
+    outline: 1px solid red;
+}
+
+.error-span {
+    display: block;
+    height: 0.8rem;
+    padding-top: 5px;
+    color: red;
+    font-size: 0.8rem;
+}
+
+.submission-error {
+    display: none;
+    padding: 20px 10px;
+    background-color: rgb(255, 216, 223);
+    border: 3px solid red;
+    border-radius: 5px;
+    color: red;
+    text-align: center;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.border-box {
+    box-sizing: border-box;
+}
+
+#profile-image {
+    padding: 10px 0px;
+    border: none;
+}
+
+#submit {
+    border-radius: 3px;
+    background-color: #4caf50;
+    color: white;
+}
+    </style>
+</head>
+
+<body>
+    <dialog>
+        <p>Model dialog</p>
+        <div>
+            <button id="confirm"></button>
+            <button id="cancel"></button>
+        </div>
+    </dialog>
+    <div class="profile-container">
+        <div>
+            <div class="img-container">
+            
+            </div>
+            <button id="upload-img" type="button">Upload Image</button>
+        </div>
+        <div>
+            <form action="" class="info-container">
+                <h1>
+                    My Profile
+                    <button id="edit" type="button">Edit</button>
+                    <button id="delete" type="button">Delete</button>
+                </h1>
+                <p>
+                    <label for="first-name">First Name:</label>
+                    <input type="text" name="first_name" id="first-name" class="full-width border-box" data-required
+                        disabled value="John">
+                    <span class="error-span"></span>
+                </p>
+
+                <p>
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" name="last_name" id="last-name" class="full-width border-box" data-required
+                        disabled value="Doe">
+                    <span class="error-span"></span>
+                </p>
+
+                <p>
+                    <label for="date-of-birth">Date of Birth:</label>
+                    <input type="date" name="date_of_birth" id="date-of-birth" class="full-width border-box"
+                        data-required disabled value="2001-01-01">
+                    <span class="error-span"></span>
+                </p>
+
+                <p>
+
+                </p>
+
+                <p>
+                    <label for="gender">Gender:</label>
+                    <select name="gender" id="gender" class="full-width border-box" data-required disabled>
+                        <option value="" disabled>Select Gender</option>
+                        <option value="male" selected>Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <span class="error-span"></span>
+                </p>
+
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        html {
+            font-family: Arial, sans-serif;
+        }
+
+        .mainDiv {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            width: 400px;
+            margin: 50px auto;
+            padding-bottom: 50px;
+            padding-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+
+        .input {
+            margin: 5px;
+            margin-left: 0;
+            padding: 10px;
+            width: 350px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        label {
+            margin-top: 10px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 12px;
+            background-color: #4caf50;
+            color: white;
+            border-radius: 3px;
+            border: none;
+            font-size: large;
+        }
+
+        button:hover {
+            background-color: rgb(25, 150, 72);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body style="background-color: rgba(209, 213, 213, 0.418);">
+    <div>
+        <p class="submission-error"></p>
+        <form action="" class="mainDiv">
+            <h2 style="text-align: center;">Login Form</h2>
+            <label for="email">Email: </label>
+            <input type="text" class="input" name="email" id="email">
+            <label for="password">Password</label>
+            <input type="password" class="input" name="password" id="password"><br>
+
+            Remember me
+
+
+            <button type="submit" id="submit">Login</button>
+            <p style="text-align: center; font-size: large;"><a href="LoginForm.html"  style="color:  #007bff;">Forgot Password?</a></p>
+            <p style="text-align: center; font-size: large;">Don't have an account? <a  style="color:  #007bff;"
+                    href="LoginForm.html">Register</a></p>
+        </form>
+    </div>
+</body>
+
+</html>
